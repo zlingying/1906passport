@@ -79,7 +79,7 @@
                 </div>
             @endif -->
             <div class="top-right links">
-                <a href="{{ url('shop') }}">商城</a>
+                <a href="{{ url('index') }}">商城</a>
                 <a href="{{ url('reg') }}">注册</a>
                 <a href="{{ url('login') }}">登录</a>
             </div>
