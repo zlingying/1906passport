@@ -39,14 +39,18 @@ class LoginController extends Controller
 	public function login_do(Request $request)
 	{
 		$post=Request()->all();
-		//dd($post);
-		$get=reg::where('u_name',$post['u_name'])->get()->toArray();
+		$get=reg::where('u_mobile',$post['u_mobile'])->get()->toArray();
 		//dd($get);
 		if($get==[]){
-			return redirect('/login');
+			echo"<script>location.href='/login',alert('登录失败，请重新登录')</script>";
 		}else{
-			echo"<script>location.href='/index',alert('登录成功')</script>";
+			echo"<script>location.href='/index',alert('登录成功，欢迎来到商城')</script>";
 		}
+	}
+	//登录成功后跳转页面
+	public function index()
+	{
+		return view('login/index');
 	}
 
 }

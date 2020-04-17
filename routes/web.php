@@ -24,3 +24,5 @@ Route::post('/reg_do','login\LoginController@reg_do');
 Route::get('/login','login\LoginController@login');
 //执行登录
 Route::post('/login_do','login\LoginController@login_do');
+//登录成功跳转页面
+Route::get('/index','login\LoginController@index');
